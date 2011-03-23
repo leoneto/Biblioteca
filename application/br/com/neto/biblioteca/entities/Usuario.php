@@ -4,7 +4,7 @@ namespace br\com\neto\biblioteca\entities{
 		
 		private $cpf;
 			
-		public function setCpf(){
+		public function setCpf($cpf){
 			$this->cpf = $cpf;
 		}
 		public function getCpf(){

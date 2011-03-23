@@ -4,7 +4,7 @@ namespace br\com\neto\biblioteca\entities{
 		
 		private $cnpj;
 			
-		public function setCnpj(){
+		public function setCnpj($cnpj){
 			$this->cnpj = $cnpj;
 		}
 		public function getNome(){

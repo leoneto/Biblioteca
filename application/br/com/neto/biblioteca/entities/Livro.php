@@ -10,6 +10,8 @@ namespace br\com\neto\biblioteca\entities{
 		private $edicao;
 		private $pagina;
 		private $quantidade;
+		private $editora;
+		private $autor;
 			
 		public function setId($id){
 			$this->id = $id;
@@ -46,6 +48,18 @@ namespace br\com\neto\biblioteca\entities{
 		}
 		public function getQuantidade(){
 			return $this->quantidade;
+		}
+		public function setEditora($editora){
+			$this->editora = $editora;
+		}
+		public function getEditora(){
+			return $this->editora;
+		}
+		public function setAutor($autor){
+			$this->autor = $autor;
+		}
+		public function getAutor(){
+			return $this->autor;
 		}
 		
 	}

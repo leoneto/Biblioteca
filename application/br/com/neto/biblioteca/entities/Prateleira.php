@@ -4,6 +4,7 @@ namespace br\com\neto\biblioteca\entities{
 		
 		private $id;
 		private $posicao;
+		private $livros;
 			
 		public function setId($id){
 			$this->id = $id;
@@ -12,10 +13,16 @@ namespace br\com\neto\biblioteca\entities{
 			return $this->id;
 		}
 		public function setPosicao($posicao){
-			$this->id = $id;
+			$this->posicao = $posicao;
 		}
 		public function getPosicao(){
-			return $this->id;
+			return $this->posicao;
 		}
+		public function setLivros($livros){
+			$this->livros = $livros;
+		}
+		public function getLivros(){
+			return $this->livros;
 	}
+}
 }
