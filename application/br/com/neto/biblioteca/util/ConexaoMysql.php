@@ -8,6 +8,8 @@ namespace br\com\neto\biblioteca\util {
  * Exemplo de classe singleton (conexão MySQL via PDO)
  *
  * @author Luís Otávio Cobucci Oblonczyk <lcobucci@gmail.com>
+ * @method PDOStatement prepare
+ * @method int lastInsertId
  */
 class ConexaoMysql
 {
@@ -76,7 +78,7 @@ class ConexaoMysql
 	 */
 	private function __construct()
 	{
-		$this->connection = new PDO('mysql:host=' . self::HOST . ';dbname=' . self::DB, self::USER, self::PASS);
+		$this->connection = new \PDO('mysql:host=' . self::HOST . ';dbname=' . self::DB, self::USER, self::PASS);
 		$this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	}
 
