@@ -25,7 +25,7 @@ class ConexaoMysql
 	 *
 	 * @var string
 	 */
-	const DB = 'mysql';
+	const DB = 'biblioteca';
 
 	/**
 	 * Usuário a ser utilizado durante a conexão
@@ -39,7 +39,7 @@ class ConexaoMysql
 	 *
 	 * @var string
 	 */
-	const PASS = 'admin';
+	const PASS = '';
 
 	/**
 	 * Instância única da classe
@@ -79,7 +79,7 @@ class ConexaoMysql
 	private function __construct()
 	{
 		$this->connection = new \PDO('mysql:host=' . self::HOST . ';dbname=' . self::DB, self::USER, self::PASS);
-		$this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$this->connection->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 	}
 
 	/**

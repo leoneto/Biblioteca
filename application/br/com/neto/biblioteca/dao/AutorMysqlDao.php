@@ -32,7 +32,7 @@ namespace br\com\neto\biblioteca\dao {
 			$sql->execute(array($autor->getNome(), $autor->getId()));
 			}
 			else{
-			$sql = ConexaoMysql::getInstance()->prepare("INSERT INTO autor VALUES  nome = ? ");
+			$sql = ConexaoMysql::getInstance()->prepare("INSERT INTO autor (nome) VALUES (?)");
 			$sql->execute(array($autor->getNome()));		
 			$autor->setId(ConexaoMysql::getInstance()->lastInsertId());
 			}		
